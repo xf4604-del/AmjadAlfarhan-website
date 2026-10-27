@@ -34,6 +34,9 @@ body {
   line-height: 1.9;
   overflow-x: hidden;
   cursor: default;
+  margin: 0;
+  width: 100%;
+  min-width: 320px;
 }
 
 a {
@@ -50,6 +53,7 @@ a {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 figure {
@@ -702,12 +706,25 @@ footer p {
   line-height: 2;
 }
 /* =========================
-   الشاشات المتوسطة
+   Responsive Design
+   الجوال والآيباد واللابتوب
 ========================= */
-@media (max-width: 1000px) {
+
+/* الشاشات المتوسطة - الآيباد */
+@media (max-width: 1024px) {
+  main > section {
+    width: calc(100% - 48px);
+    padding-block: 65px;
+  }
+
   header {
-    padding-inline: 22px;
-    gap: 15px;
+    gap: 16px;
+    padding: 12px 24px;
+  }
+
+  header .brand-photo {
+    width: 48px;
+    height: 48px;
   }
 
   header nav {
@@ -718,34 +735,26 @@ footer p {
     font-size: 12px;
   }
 
-  main > section {
-    width: calc(100% - 44px);
-    padding-block: 65px;
-  }
-
   #home {
-    min-height: 570px;
-    gap: 25px;
+    min-height: auto;
+    gap: 30px;
+    padding-block: 55px;
   }
 
   .hero-gallery {
-    height: 430px;
+    height: 420px;
   }
 
   .hero-image-main {
-    height: 355px;
+    height: 350px;
   }
 
   .hero-image-bottom {
-    height: 160px;
+    height: 170px;
   }
 
   .hero-image-top {
-    height: 175px;
-  }
-
-  .hero-copy h2 {
-    font-size: clamp(35px, 4.5vw, 55px);
+    height: 170px;
   }
 
   .photo-grid {
@@ -753,164 +762,151 @@ footer p {
   }
 
   .photo-open {
-    height: 290px;
+    height: 280px;
   }
 
   .services-section {
-    padding-inline: 32px;
+    padding: 65px 24px;
+  }
+
+  .contact-section {
+    padding: 65px 24px;
   }
 }
 
-/* =========================
-   الجوال
-========================= */
-@media (max-width: 700px) {
-  header {
-    display: grid;
-    grid-template-columns: 46px minmax(0, 1fr);
-    gap: 10px;
-    padding: 12px 17px;
-  }
-
-  header .brand-photo {
-    width: 44px;
-    height: 44px;
-  }
-
-  header > h1 {
-    font-size: 15px;
-  }
-
-  .nav-wrap {
-    grid-column: 1 / -1;
-    width: 100%;
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
-
-  .nav-wrap::-webkit-scrollbar {
-    display: none;
-  }
-
-  header nav {
-    width: max-content;
-    gap: 22px;
-    padding: 4px 0;
+/* الجوال والآيباد الصغير */
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 130px;
   }
 
   main > section {
     width: calc(100% - 36px);
-    padding-block: 52px;
+    padding-block: 50px;
   }
 
-  /* الجوال: النص أولًا والصور تحته */
+  /* رأس الموقع */
+  header {
+    position: sticky;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 14px;
+    padding: 10px 16px;
+  }
+
+  header .brand-photo {
+    width: 42px;
+    height: 42px;
+  }
+
+  header > h1 {
+    flex: 1;
+    min-width: 0;
+    font-size: 16px;
+  }
+
+  .nav-wrap {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 4px 0 7px;
+    scrollbar-width: thin;
+  }
+
+  header nav {
+    width: max-content;
+    flex-shrink: 0;
+    gap: 22px;
+  }
+
+  header nav a {
+    font-size: 13px;
+  }
+
+  /* القسم الرئيسي */
   #home {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 25px;
+    padding-block: 40px;
     min-height: auto;
-    padding-top: 38px;
-    padding-bottom: 30px;
-    gap: 0;
   }
 
   .hero-copy {
-    order: 1;
-    padding-block: 0;
+    grid-column: 1;
+    grid-row: 1;
+    padding: 0;
   }
 
   .hero-copy h2 {
-    width: 100%;
-    margin: 0 0 14px;
-    font-size: clamp(36px, 9vw, 49px);
-    line-height: 1.5;
+    font-size: clamp(30px, 7vw, 44px);
+    line-height: 1.6;
   }
 
   .hero-description {
-    font-size: 13px;
-    margin-bottom: 20px;
-  }
-
-  .hero-actions {
-    gap: 9px;
-  }
-
-  .button {
-    padding: 10px 14px;
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .hero-gallery {
-    order: 2;
-    position: relative;
-    inset: auto;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
-    height: auto;
-    margin-top: 22px;
-    pointer-events: auto;
-  }
-
-  .hero-image {
-    position: relative;
-    inset: auto;
-    right: auto;
-    left: auto;
-    bottom: auto;
-    width: auto;
-    height: 170px;
-    border-width: 0;
-    box-shadow: none;
+    grid-column: 1;
+    grid-row: 2;
+    height: clamp(300px, 85vw, 430px);
   }
 
   .hero-image-main {
-    grid-column: 1 / -1;
-    height: 290px;
+    top: 25px;
+    left: 18%;
+    width: 62%;
+    height: 75%;
   }
 
-  .hero-image-bottom,
+  .hero-image-bottom {
+    bottom: 0;
+    left: 0;
+    width: 38%;
+    height: 38%;
+  }
+
   .hero-image-top {
-    height: 175px;
+    top: 0;
+    right: 0;
+    width: 35%;
+    height: 36%;
   }
 
+  .hero-actions {
+    gap: 10px;
+  }
+
+  .button {
+    padding: 10px 16px;
+  }
+
+  /* المقدمة */
   .intro-section {
-    width: 100%;
-    padding: 52px 20px;
+    padding: 50px 20px;
   }
 
-  .intro-section h2,
-  .section-heading h2,
-  .about-section h2 {
-    font-size: 29px;
-  }
-
-  .intro-section > p:last-child,
-  .section-heading > p:last-child,
-  .about-section > p:last-child {
-    font-size: 13px;
-  }
-
+  /* معرض الصور */
   #portfolio {
-    padding-block: 60px;
+    padding-block: 55px;
+  }
+
+  .section-heading {
+    margin-bottom: 28px;
   }
 
   .portfolio-group {
     margin-top: 35px;
   }
 
-  .portfolio-group > h3 {
-    font-size: 17px;
-    margin-bottom: 14px;
-  }
-
   .photo-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 11px;
+    gap: 12px;
   }
 
   .photo-open {
-    height: 225px;
+    height: clamp(170px, 42vw, 260px);
   }
 
   .portfolio-card figcaption {
@@ -918,20 +914,14 @@ footer p {
     font-size: 12px;
   }
 
-  .zoom-hint {
-    opacity: 1;
-    transform: none;
-    font-size: 10px;
-  }
-
+  /* الخدمات */
   .services-section {
-    width: 100%;
-    padding: 58px 20px;
+    padding: 50px 18px;
   }
 
   .services-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
   }
 
   .service-card {
@@ -939,96 +929,151 @@ footer p {
     padding: 22px;
   }
 
-  .service-number {
-    margin-bottom: 12px;
-  }
-
-  .service-card h3 {
-    font-size: 16px;
-  }
-
-  .service-card p {
-    font-size: 12px;
-  }
-
+  /* من أنا */
   .about-section {
     padding-block: 60px;
   }
 
+  /* التواصل */
   .contact-section {
-    padding: 58px 20px;
+    padding: 50px 18px;
   }
 
   .contact-section form {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 16px;
     padding: 20px;
   }
 
   .form-field-full,
   .submit-button {
-    grid-column: 1 / -1;
+    grid-column: 1;
   }
 
   .submit-button {
+    justify-self: stretch;
     width: 100%;
   }
 
   .social {
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
   }
 
   .social a {
     flex: auto;
-    min-height: 54px;
+    min-height: 55px;
   }
 
+  /* تكبير الصور */
   .lightbox {
     padding: 15px;
   }
 
   .lightbox img {
-    max-width: 96vw;
+    max-width: 94vw;
     max-height: 80vh;
   }
 
   .lightbox-close {
     top: 12px;
-    right: 17px;
+    right: 16px;
   }
 }
 
-@media (max-width: 380px) {
+/* الجوال الصغير */
+@media (max-width: 480px) {
+  main > section {
+    width: calc(100% - 28px);
+    padding-block: 40px;
+  }
+
+  header {
+    padding-inline: 12px;
+  }
+
   header > h1 {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   header nav {
-    gap: 15px;
+    gap: 18px;
+  }
+
+  header nav a {
+    font-size: 12px;
+  }
+
+  #home {
+    gap: 20px;
+    padding-block: 30px;
+  }
+
+  .hero-copy h2 {
+    font-size: 32px;
+  }
+
+  .hero-gallery {
+    height: 310px;
+  }
+
+  .hero-image {
+    border-width: 4px;
   }
 
   .hero-image-main {
-    height: 255px;
+    height: 75%;
   }
 
-  .hero-image-bottom,
+  .hero-image-bottom {
+    height: 36%;
+  }
+
   .hero-image-top {
-    height: 145px;
+    height: 34%;
+  }
+
+  .hero-actions .button {
+    flex: 1 1 auto;
+    padding-inline: 10px;
+    font-size: 12px;
+  }
+
+  .section-heading h2,
+  .intro-section h2,
+  .about-section h2 {
+    font-size: 29px;
+  }
+
+  .photo-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
   }
 
   .photo-open {
-    height: 190px;
+    height: 300px;
   }
-}
 
-/* تقليل الحركة حسب إعدادات الجهاز */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    scroll-behavior: auto !important;
-    transition: none !important;
-    animation: none !important;
+  .portfolio-group > h3 {
+    font-size: 18px;
+  }
+
+  .service-card {
+    padding: 18px;
+  }
+
+  .contact-section form {
+    padding: 16px;
+  }
+
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  footer {
+    padding: 22px 14px;
   }
 }
