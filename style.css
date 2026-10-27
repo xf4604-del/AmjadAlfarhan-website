@@ -701,3 +701,334 @@ footer p {
   font-size: 12px;
   line-height: 2;
 }
+/* =========================
+   الشاشات المتوسطة
+========================= */
+@media (max-width: 1000px) {
+  header {
+    padding-inline: 22px;
+    gap: 15px;
+  }
+
+  header nav {
+    gap: 14px;
+  }
+
+  header nav a {
+    font-size: 12px;
+  }
+
+  main > section {
+    width: calc(100% - 44px);
+    padding-block: 65px;
+  }
+
+  #home {
+    min-height: 570px;
+    gap: 25px;
+  }
+
+  .hero-gallery {
+    height: 430px;
+  }
+
+  .hero-image-main {
+    height: 355px;
+  }
+
+  .hero-image-bottom {
+    height: 160px;
+  }
+
+  .hero-image-top {
+    height: 175px;
+  }
+
+  .hero-copy h2 {
+    font-size: clamp(35px, 4.5vw, 55px);
+  }
+
+  .photo-grid {
+    gap: 14px;
+  }
+
+  .photo-open {
+    height: 290px;
+  }
+
+  .services-section {
+    padding-inline: 32px;
+  }
+}
+
+/* =========================
+   الجوال
+========================= */
+@media (max-width: 700px) {
+  header {
+    display: grid;
+    grid-template-columns: 46px minmax(0, 1fr);
+    gap: 10px;
+    padding: 12px 17px;
+  }
+
+  header .brand-photo {
+    width: 44px;
+    height: 44px;
+  }
+
+  header > h1 {
+    font-size: 15px;
+  }
+
+  .nav-wrap {
+    grid-column: 1 / -1;
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .nav-wrap::-webkit-scrollbar {
+    display: none;
+  }
+
+  header nav {
+    width: max-content;
+    gap: 22px;
+    padding: 4px 0;
+  }
+
+  main > section {
+    width: calc(100% - 36px);
+    padding-block: 52px;
+  }
+
+  /* الجوال: النص أولًا والصور تحته */
+  #home {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: auto;
+    padding-top: 38px;
+    padding-bottom: 30px;
+    gap: 0;
+  }
+
+  .hero-copy {
+    order: 1;
+    padding-block: 0;
+  }
+
+  .hero-copy h2 {
+    width: 100%;
+    margin: 0 0 14px;
+    font-size: clamp(36px, 9vw, 49px);
+    line-height: 1.5;
+  }
+
+  .hero-description {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .hero-actions {
+    gap: 9px;
+  }
+
+  .button {
+    padding: 10px 14px;
+    font-size: 12px;
+  }
+
+  .hero-gallery {
+    order: 2;
+    position: relative;
+    inset: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    height: auto;
+    margin-top: 22px;
+    pointer-events: auto;
+  }
+
+  .hero-image {
+    position: relative;
+    inset: auto;
+    right: auto;
+    left: auto;
+    bottom: auto;
+    width: auto;
+    height: 170px;
+    border-width: 0;
+    box-shadow: none;
+  }
+
+  .hero-image-main {
+    grid-column: 1 / -1;
+    height: 290px;
+  }
+
+  .hero-image-bottom,
+  .hero-image-top {
+    height: 175px;
+  }
+
+  .intro-section {
+    width: 100%;
+    padding: 52px 20px;
+  }
+
+  .intro-section h2,
+  .section-heading h2,
+  .about-section h2 {
+    font-size: 29px;
+  }
+
+  .intro-section > p:last-child,
+  .section-heading > p:last-child,
+  .about-section > p:last-child {
+    font-size: 13px;
+  }
+
+  #portfolio {
+    padding-block: 60px;
+  }
+
+  .portfolio-group {
+    margin-top: 35px;
+  }
+
+  .portfolio-group > h3 {
+    font-size: 17px;
+    margin-bottom: 14px;
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 11px;
+  }
+
+  .photo-open {
+    height: 225px;
+  }
+
+  .portfolio-card figcaption {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .zoom-hint {
+    opacity: 1;
+    transform: none;
+    font-size: 10px;
+  }
+
+  .services-section {
+    width: 100%;
+    padding: 58px 20px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .service-card {
+    min-height: auto;
+    padding: 22px;
+  }
+
+  .service-number {
+    margin-bottom: 12px;
+  }
+
+  .service-card h3 {
+    font-size: 16px;
+  }
+
+  .service-card p {
+    font-size: 12px;
+  }
+
+  .about-section {
+    padding-block: 60px;
+  }
+
+  .contact-section {
+    padding: 58px 20px;
+  }
+
+  .contact-section form {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .form-field-full,
+  .submit-button {
+    grid-column: 1 / -1;
+  }
+
+  .submit-button {
+    width: 100%;
+  }
+
+  .social {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .social a {
+    flex: auto;
+    min-height: 54px;
+  }
+
+  .lightbox {
+    padding: 15px;
+  }
+
+  .lightbox img {
+    max-width: 96vw;
+    max-height: 80vh;
+  }
+
+  .lightbox-close {
+    top: 12px;
+    right: 17px;
+  }
+}
+
+@media (max-width: 380px) {
+  header > h1 {
+    font-size: 13px;
+  }
+
+  header nav {
+    gap: 15px;
+  }
+
+  .hero-image-main {
+    height: 255px;
+  }
+
+  .hero-image-bottom,
+  .hero-image-top {
+    height: 145px;
+  }
+
+  .photo-open {
+    height: 190px;
+  }
+}
+
+/* تقليل الحركة حسب إعدادات الجهاز */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}
