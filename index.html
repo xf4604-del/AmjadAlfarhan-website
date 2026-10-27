@@ -8,341 +8,489 @@
       content="معرض أعمال تصوير فوتوغرافي للمقاهي والمطاعم واليوميات، وخدمات تصوير وصناعة محتوى بصري."
     />
     <link rel="stylesheet" href="style.css" />
-    <title>photographer Amjad Alfarhan | تصوير فوتوغرافي</title>
+    <title>Photographer Amjad Alfarhan | تصوير فوتوغرافي</title>
   </head>
 
   <body>
-    <!-- رأس الموقع -->
     <header>
-      <figure>
+      <figure class="brand-photo">
         <img
           src="img/Photo/IMG_0100.JPG.jpeg"
-          alt="صورة رئيسية من أعمال المصور"
+          alt="صورة من أعمال المصور"
           width="300"
           height="300"
         />
       </figure>
+
       <h1>Photographer Amjad Alfarhan</h1>
-      <div>
-        <nav>
+
+      <div class="nav-wrap">
+        <nav aria-label="التنقل الرئيسي">
           <a href="#home">الرئيسية</a>
-          <a href="#portfolio">أعمالنا</a>
-          <a href="#services">خدماتنا</a>
-          <a href="#about">من نحن ؟</a>
-          <a href="#contact">تواصل معنا</a>
+          <a href="#portfolio">أعمالي</a>
+          <a href="#services">خدماتي</a>
+          <a href="#about">من أنا</a>
+          <a href="#contact">تواصل معي</a>
         </nav>
       </div>
     </header>
 
     <main>
-      <!-- الصفحة الرئيسية -->
-      <section id="home">
-        <h1>
-          أرى الجمال<br />
-          في تفاصيل الصور
-        </h1>
+      <section id="home" aria-labelledby="home-title">
+        <div class="hero-copy">
+          <h2 id="home-title">أرى الجمال<br />في تفاصيل الصور</h2>
+          <p class="hero-description">
+            ألتقط تفاصيل الأماكن والأطباق واللحظات اليومية، وأحوّلها إلى صور
+            تحكي قصة المكان وتعكس هويته.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#portfolio">اكتشف أعمالي</a>
+            <a class="button button-outline" href="#contact">احجز جلسة تصوير</a>
+          </div>
+        </div>
 
-        <br />
-        <a href="#portfolio">اكتشف أعمالنا</a>
-        <a href="#contact">احجز جلسة تصوير</a>
+        <div class="hero-gallery" aria-label="نماذج من أعمال التصوير">
+          <figure class="hero-image hero-image-main">
+            <img
+              src="img/Photo/IMG_9604.JPG.jpeg"
+              alt="لقطة من أعمال التصوير"
+              width="350"
+              height="600"
+            />
+          </figure>
 
-        <figure>
-          <img
-            src="img/Photo/IMG_9604.JPG.jpeg"
-            alt="صورة رئيسية من أعمال المصور"
-            width="350"
-            height="600"
-          />
-        </figure>
-        <figure>
-          <img
-            src="img/Photo/IMG_6216.PNG"
-            alt="صورة رئيسية من أعمال المصور"
-            width="350"
-            height="600"
-          />
-        </figure>
-        <figure>
-          <img
-            src="img/Photo/IMG_2536.PNG"
-            alt="صورة رئيسية من أعمال المصور"
-            width="350"
-            height="600"
-          />
-        </figure>
+          <figure class="hero-image hero-image-small hero-image-bottom">
+            <img
+              src="img/Photo/IMG_6216.PNG"
+              alt="تفاصيل من أعمال التصوير"
+              width="350"
+              height="600"
+            />
+          </figure>
+
+          <figure class="hero-image hero-image-small hero-image-top">
+            <img
+              src="img/Photo/IMG_2536.PNG"
+              alt="صورة من أعمال المصور"
+              width="350"
+              height="600"
+            />
+          </figure>
+        </div>
       </section>
 
-      <!-- مقدمة -->
-      <section id="intro">
+      <section id="intro" class="intro-section">
+        <p class="eyebrow">وراء كل لقطة حكاية</p>
         <h2>التفاصيل تصنع الفرق</h2>
-
         <p>
           أؤمن أن كل مكان يمتلك قصة تستحق أن تُروى، وأن الصورة الجميلة قادرة على
           تحويل اللحظات البسيطة إلى ذكريات وتجارب بصرية لا تُنسى.
         </p>
       </section>
 
-      <!-- معرض الأعمال -->
-      <section id="portfolio">
-        <h2>أعمالنا</h2>
+      <section id="portfolio" class="content-section">
+        <div class="section-heading">
+          <h2>أعمالي</h2>
+          <p>
+            مجموعة من اللقطات التي توثق جمال الأماكن، وتفاصيل الطعام، واللحظات
+            اليومية بعدستي.
+          </p>
+        </div>
 
-        <p>
-          مجموعة من اللقطات التي توثق جمال الأماكن، وتفاصيل الطعام، واللحظات
-          اليومية بعدستي.
-        </p>
-
-        <!-- تصوير المقاهي -->
-        <section>
+        <section class="portfolio-group">
           <h3>تصوير المقاهي</h3>
+          <div class="photo-grid">
+            <figure class="portfolio-card">
+              <a
+                class="photo-open"
+                href="#photo1"
+                aria-label="تكبير صورة كوب قهوة"
+              >
+                <img
+                  src="img/Photo/IMG_2543.PNG"
+                  alt="تصوير فنجان قهوة في مقهى"
+                />
+                <span class="zoom-hint">عرض الصورة ↗️</span>
+              </a>
+              <figcaption>كوب قهوة</figcaption>
+            </figure>
 
-          <figure>
-            <img
-              src="img/Photo/IMG_2543.PNG"
-              alt="تصوير فنجان قهوة في مقهى"
-              width="160"
-              height="280"
-            />
-            <figcaption>كوب قهوة</figcaption>
-          </figure>
+            <figure class="portfolio-card">
+              <a
+                class="photo-open"
+                href="#photo2"
+                aria-label="تكبير صورة مساحة هادئة"
+              >
+                <img
+                  src="img/Photo/IMG_2531.PNG"
+                  alt="تصوير التصميم الداخلي لمقهى"
+                />
+                <span class="zoom-hint">عرض الصورة ↗️</span>
+              </a>
+              <figcaption>مساحة هادئة</figcaption>
+            </figure>
 
-          <figure>
-            <img
-              src="img/Photo/IMG_2531.PNG"
-              alt="تصوير التصميم الداخلي لمقهى"
-              width="160"
-              height="280"
-            />
-            <figcaption>مساحة هادئة</figcaption>
-          </figure>
-
-          <figure>
-            <img
-              src="img/Photo/IMG_2533.PNG"
-              alt="تصوير قهوة سعودية"
-              width="160"
-              height="280"
-            />
-            <figcaption>قهوة سعودية</figcaption>
-          </figure>
+            <figure class="portfolio-card">
+              <a
+                class="photo-open"
+                href="#photo3"
+                aria-label="تكبير صورة القهوة السعودية"
+              >
+                <img src="img/Photo/IMG_2533.PNG" alt="تصوير قهوة سعودية" />
+                <span class="zoom-hint">عرض الصورة ↗️</span>
+              </a>
+              <figcaption>قهوة سعودية</figcaption>
+            </figure>
+          </div>
         </section>
 
-        <!-- تصوير المطاعم -->
-        <section>
+        <section class="portfolio-group">
           <h3>تصوير المطاعم والأطباق</h3>
+          <div class="photo-grid">
+            <figure class="portfolio-card">
+              <a
+                class="photo-open"
+                href="#photo4"
+                aria-label="تكبير صورة فن التقديم"
+              >
+                <img src="img/Photo/IMG_2542.PNG" alt="تصوير طبق طعام" />
+                <span class="zoom-hint">عرض الصورة ↗️</span>
+              </a>
+              <figcaption>فن التقديم</figcaption>
+            </figure>
 
-          <figure>
-            <img
-              src="img/Photo/IMG_2542.PNG"
-              alt="تصوير طبق طعام"
-              width="160"
-              height="280"
-            />
-            <figcaption>فن التقديم</figcaption>
-          </figure>
+            <figure class="portfolio-card">
+              <a
+                class="photo-open"
+                href="#photo5"
+                aria-label="تكبير صورة تفاصيل المكونات"
+              >
+                <img
+                  src="img/Photo/IMG_2537.PNG"
+                  alt="تصوير تفاصيل طبق ومكوناته"
+                />
+                <span class="zoom-hint">عرض الصورة ↗️</span>
+              </a>
+              <figcaption>من قلب المكونات</figcaption>
+            </figure>
 
-          <figure>
-            <img
-              src="img/Photo/IMG_2537.PNG"
-              alt="تصوير تفاصيل طبق ومكوناته"
-              width="160"
-              height="280"
-            />
-            <figcaption>من قلب المكونات</figcaption>
-          </figure>
-
-          <figure>
-            <img
-              src="img/Photo/IMG_2539.PNG"
-              alt="تصوير طبق في مطعم"
-              width="160"
-              height="280"
-            />
-            <figcaption>تفاصيل مطعم</figcaption>
-          </figure>
+            <figure class="portfolio-card">
+              <a
+                class="photo-open"
+                href="#photo6"
+                aria-label="تكبير صورة تفاصيل مطعم"
+              >
+                <img src="img/Photo/IMG_2539.PNG" alt="تصوير طبق في مطعم" />
+                <span class="zoom-hint">عرض الصورة ↗️</span>
+              </a>
+              <figcaption>تفاصيل مطعم</figcaption>
+            </figure>
+          </div>
         </section>
 
-        <!-- تصوير اليوميات -->
-        <section>
+        <section class="portfolio-group">
           <h3>اليوميات ونمط الحياة</h3>
+          <div class="photo-grid">
+            <figure class="portfolio-card">
+              <a
+                class="photo-open"
+                href="#photo7"
+                aria-label="تكبير صورة بين الطبيعة"
+              >
+                <img src="img/Photo/IMG_2530.PNG" alt="لقطة يومية في مقهى" />
+                <span class="zoom-hint">عرض الصورة ↗️</span>
+              </a>
+              <figcaption>بين الطبيعة</figcaption>
+            </figure>
 
-          <figure>
-            <img
-              src="img/Photo/IMG_2530.PNG"
-              alt="لقطة يومية في مقهى"
-              width="160"
-              height="280"
-            />
-            <figcaption>بين الطبيعة</figcaption>
-          </figure>
+            <figure class="portfolio-card">
+              <a
+                class="photo-open"
+                href="#photo8"
+                aria-label="تكبير صورة لحظة احتفالية"
+              >
+                <img
+                  src="img/Photo/IMG_2544.PNG"
+                  alt="تصوير من الحياة اليومية"
+                />
+                <span class="zoom-hint">عرض الصورة ↗️</span>
+              </a>
+              <figcaption>لحظة احتفالية</figcaption>
+            </figure>
 
-          <figure>
-            <img
-              src="img/Photo/IMG_2544.PNG"
-              alt="تصوير من الحياة اليومية"
-              width="160"
-              height="280"
-            />
-            <figcaption>لحظة احتفالية</figcaption>
-          </figure>
-
-          <figure>
-            <img
-              src="img/Photo/IMG_5016.JPG.jpeg"
-              alt="تصوير مكان بإضاءة طبيعية"
-              width="160"
-              height="280"
-            />
-            <figcaption>ضوء وحكاية</figcaption>
-          </figure>
+            <figure class="portfolio-card">
+              <a
+                class="photo-open"
+                href="#photo9"
+                aria-label="تكبير صورة ضوء وحكاية"
+              >
+                <img
+                  src="img/Photo/IMG_5016.JPG.jpeg"
+                  alt="تصوير مكان بإضاءة طبيعية"
+                />
+                <span class="zoom-hint">عرض الصورة ↗️</span>
+              </a>
+              <figcaption>ضوء وحكاية</figcaption>
+            </figure>
+          </div>
         </section>
       </section>
 
-      <!-- الخدمات -->
-      <section id="services">
-        <h2>خدمات التصوير</h2>
+      <a
+        class="lightbox"
+        id="photo1"
+        href="#portfolio"
+        aria-label="إغلاق الصورة المكبرة"
+      >
+        <span class="lightbox-close">&times;</span>
+        <img src="img/Photo/IMG_2543.PNG" alt="تصوير فنجان قهوة في مقهى" />
+      </a>
 
-        <p>
-          نقدم خدمات تصوير تساعد المشاريع على إبراز هويتها وتقديم محتوى بصري
-          يعكس جودة منتجاتها وأجوائها.
-        </p>
+      <a
+        class="lightbox"
+        id="photo2"
+        href="#portfolio"
+        aria-label="إغلاق الصورة المكبرة"
+      >
+        <span class="lightbox-close">&times;</span>
+        <img src="img/Photo/IMG_2531.PNG" alt="تصوير التصميم الداخلي لمقهى" />
+      </a>
 
-        <article>
-          <h3>01 — تصوير المقاهي</h3>
+      <a
+        class="lightbox"
+        id="photo3"
+        href="#portfolio"
+        aria-label="إغلاق الصورة المكبرة"
+      >
+        <span class="lightbox-close">&times;</span>
+        <img src="img/Photo/IMG_2533.PNG" alt="تصوير قهوة سعودية" />
+      </a>
 
-          <p>
-            تصوير المشروبات والقهوة، والديكور، والجلسات، والأجواء العامة للمقهى.
-          </p>
-        </article>
+      <a
+        class="lightbox"
+        id="photo4"
+        href="#portfolio"
+        aria-label="إغلاق الصورة المكبرة"
+      >
+        <span class="lightbox-close">&times;</span>
+        <img src="img/Photo/IMG_2542.PNG" alt="تصوير طبق طعام" />
+      </a>
 
-        <article>
-          <h3>02 — تصوير المطاعم</h3>
+      <a
+        class="lightbox"
+        id="photo5"
+        href="#portfolio"
+        aria-label="إغلاق الصورة المكبرة"
+      >
+        <span class="lightbox-close">&times;</span>
+        <img src="img/Photo/IMG_2537.PNG" alt="تصوير تفاصيل طبق ومكوناته" />
+      </a>
 
-          <p>
-            تصوير الأطباق والمكونات وتفاصيل التقديم، مع التركيز على الإضاءة
-            والتكوين والألوان.
-          </p>
-        </article>
+      <a
+        class="lightbox"
+        id="photo6"
+        href="#portfolio"
+        aria-label="إغلاق الصورة المكبرة"
+      >
+        <span class="lightbox-close">&times;</span>
+        <img src="img/Photo/IMG_2539.PNG" alt="تصوير طبق في مطعم" />
+      </a>
 
-        <article>
-          <h3>03 — صناعة المحتوى البصري</h3>
+      <a
+        class="lightbox"
+        id="photo7"
+        href="#portfolio"
+        aria-label="إغلاق الصورة المكبرة"
+      >
+        <span class="lightbox-close">&times;</span>
+        <img src="img/Photo/IMG_2530.PNG" alt="لقطة يومية في مقهى" />
+      </a>
 
-          <p>
-            إعداد مجموعة صور متناسقة تناسب حسابات التواصل الاجتماعي والمواقع
-            الإلكترونية والحملات التسويقية.
-          </p>
-        </article>
+      <a
+        class="lightbox"
+        id="photo8"
+        href="#portfolio"
+        aria-label="إغلاق الصورة المكبرة"
+      >
+        <span class="lightbox-close">&times;</span>
+        <img src="img/Photo/IMG_2544.PNG" alt="تصوير من الحياة اليومية" />
+      </a>
 
-        <article>
-          <h3>04 — تصوير اليوميات</h3>
+      <a
+        class="lightbox"
+        id="photo9"
+        href="#portfolio"
+        aria-label="إغلاق الصورة المكبرة"
+      >
+        <span class="lightbox-close">&times;</span>
+        <img src="img/Photo/IMG_5016.JPG.jpeg" alt="تصوير مكان بإضاءة طبيعية" />
+      </a>
 
-          <p>توثيق التجارب والأماكن واللحظات اليومية بأسلوب عفوي وشخصي.</p>
-        </article>
+      <section id="services" class="services-section">
+        <div class="services-inner">
+          <div class="section-heading">
+            <p class="eyebrow">كيف أستطيع مساعدتك؟</p>
+            <h2>خدمات التصوير</h2>
+            <p>
+              خدمات تصوير تساعد المشاريع على إبراز هويتها وتقديم محتوى بصري يعكس
+              جودة منتجاتها وأجوائها.
+            </p>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card">
+              <span class="service-number">01</span>
+              <h3>تصوير المقاهي</h3>
+              <p>
+                تصوير المشروبات والقهوة والديكور والجلسات والأجواء العامة
+                للمقهى.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <span class="service-number">02</span>
+              <h3>تصوير المطاعم</h3>
+              <p>
+                تصوير الأطباق والمكونات وتفاصيل التقديم مع التركيز على الإضاءة
+                والألوان.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <span class="service-number">03</span>
+              <h3>صناعة المحتوى البصري</h3>
+              <p>
+                إعداد صور متناسقة تناسب حسابات التواصل الاجتماعي والمواقع
+                والحملات التسويقية.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <span class="service-number">04</span>
+              <h3>تصوير اليوميات</h3>
+              <p>توثيق التجارب والأماكن واللحظات اليومية بأسلوب عفوي وشخصي.</p>
+            </article>
+          </div>
+        </div>
       </section>
 
-      <!-- نبذة عن المصور -->
-      <section id="about">
-        <h2>من نحن ؟</h2>
-
+      <section id="about" class="about-section">
+        <h2>من أنا؟</h2>
         <p>
-          نؤمن أن لكل مكان حكاية، ولكل تفصيل جمال يستحق أن يُوثّق. من خلال
+          أؤمن أن لكل مكان حكاية، ولكل تفصيل جمال يستحق أن يُوثّق من خلال
           عدستنا، نسلّط الضوء على أجواء المقاهي، وتفاصيل المطاعم، ولحظات الحياة
           اليومية، بأسلوب بسيط يعكس روح المكان ويبرز جماله.
         </p>
       </section>
 
-      <!-- دعوة للتعاون -->
-      <section id="contact">
-        <h2>مشروعك يستحق أن يُرى</h2>
-
-        <p>
-          هل تملك مقهى أو مطعمًا وتبحث عن صور تعبّر عن هوية مشروعك؟ شاركنا
-          تفاصيل فكرتك واحتياجك للتصوير، وسنتحدث عن الطريقة المناسبة لتنفيذ
-          مشروعك.
-        </p>
-
-        <form action="#" method="post">
-          <div>
-            <label for="name">الاسم الكامل</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="اكتب اسمك"
-              required
-            />
+      <section id="contact" class="contact-section">
+        <div class="contact-inner">
+          <div class="section-heading">
+            <h2>مشروعك يستحق أن يُرى</h2>
+            <p>
+              شاركني تفاصيل فكرتك واحتياجك للتصوير، وسنتحدث عن الطريقة المناسبة
+              لتنفيذ مشروعك.
+            </p>
           </div>
 
-          <div>
-            <label for="business">اسم المقهى أو المطعم</label>
-            <input
-              type="text"
-              id="business"
-              name="business"
-              placeholder="اسم المشروع"
-            />
+          <form action="#" method="post">
+            <div class="form-field">
+              <label for="name">الاسم الكامل</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="اكتب اسمك"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="business">اسم المقهى أو المطعم</label>
+              <input
+                type="text"
+                id="business"
+                name="business"
+                placeholder="اسم المشروع"
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="phone">رقم التواصل</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="رقم الجوال"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="city">المدينة</label>
+              <input
+                type="text"
+                id="city"
+                name="city"
+                placeholder="المدينة التي يقع فيها المشروع"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="service">نوع التصوير المطلوب</label>
+              <select id="service" name="service" required>
+                <option value="">اختر نوع التصوير</option>
+                <option value="cafe">تصوير مقهى</option>
+                <option value="restaurant">تصوير مطعم</option>
+                <option value="content">صناعة محتوى بصري</option>
+                <option value="lifestyle">تصوير اليوميات</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="date">التاريخ المقترح للتصوير</label>
+              <input type="date" id="date" name="date" />
+            </div>
+
+            <div class="form-field form-field-full">
+              <label for="details">تفاصيل المشروع</label>
+              <textarea
+                id="details"
+                name="details"
+                rows="6"
+                placeholder="أخبرني عن مشروعك والصور التي تحتاجها"
+                required
+              ></textarea>
+            </div>
+
+            <button class="button button-primary submit-button" type="submit">
+              إرسال الطلب
+            </button>
+          </form>
+
+          <div class="social">
+            <a
+              href="https://wa.me/9665XXXXXXXX"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              تواصل عبر واتساب
+            </a>
+            <a
+              href="https://www.instagram.com/yourusername/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              تابع على إنستغرام
+            </a>
           </div>
-
-          <div>
-            <label for="phone">رقم التواصل</label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              placeholder="رقم الجوال"
-              required
-            />
-          </div>
-
-          <div>
-            <label for="city">المدينة</label>
-            <input
-              type="text"
-              id="city"
-              name="city"
-              placeholder="المدينة التي يقع فيها المشروع"
-              required
-            />
-          </div>
-
-          <div>
-            <label for="service">نوع التصوير المطلوب</label>
-            <select id="service" name="service" required>
-              <option value="">اختر نوع التصوير</option>
-              <option value="cafe">تصوير مقهى</option>
-              <option value="restaurant">تصوير مطعم</option>
-              <option value="content">صناعة محتوى بصري</option>
-            </select>
-          </div>
-
-          <div>
-            <label for="date">التاريخ المقترح للتصوير</label>
-            <input type="date" id="date" name="date" />
-          </div>
-
-          <div>
-            <label for="details">تفاصيل المشروع</label>
-            <textarea
-              id="details"
-              name="details"
-              rows="6"
-              placeholder="أخبرني عن مشروعك والصور التي تحتاجها"
-              required
-            ></textarea>
-          </div>
-
-          <button type="submit">إرسال الطلب</button>
-        </form>
-        <div class="social">
-          <a href="https://wa.me/9665XXXXXXXX"> واتساب </a>
-
-          <a href="https://www.instagram.com/yourusername/"> انستقرام </a>
         </div>
       </section>
     </main>
 
-    <!-- تذييل الموقع -->
     <footer>
-      <p>&copy; 2026 . جميع الحقوق محفوظة | Photographer Amjad Alfarhan</p>
+      <p>&copy; 2026 جميع الحقوق محفوظة | Photographer Amjad Alfarhan</p>
     </footer>
   </body>
 </html>
